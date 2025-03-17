@@ -4,9 +4,10 @@
   "private": true,
 "scripts": {
   "dev": "next dev",
-  "build": "next build",
+  "build": "cd inventory-app && npm run build",
+  "heroku-postbuild": "cd inventory-app && npm install && npm run build", 
   "postinstall": "next build",
-  "start": "next start",
+  "start": "cd inventory-app && npm start",
   "lint": "next lint"
 },
   "dependencies": {
